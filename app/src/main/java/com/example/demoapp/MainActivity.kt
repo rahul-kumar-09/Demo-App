@@ -20,8 +20,8 @@ class MainActivity : AppCompatActivity() {
 
         replaceFragment(HomeFragment())
 
-        binding.bottomNavigation.setOnItemSelectedListener { itemsId ->
-            when(itemsId.itemId){
+        binding.bottomNavigation.setOnItemSelectedListener {
+            when(it.itemId){
                 R.id.home -> replaceFragment(HomeFragment())
 
                 R.id.store -> replaceFragment(StoreFragment())
@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
 
                 R.id.food -> replaceFragment(FoodFragment())
             }
-            return@setOnItemSelectedListener false
+            return@setOnItemSelectedListener true
         }
 
 
